@@ -3,7 +3,7 @@
     {
       "id": "1",
       "text": "Doctors Appointment",
-      "day": "May 5th at 2:30pmdad",
+      "day": "May 5th at 2:30pm",
       "reminder": true
     },
     {
@@ -32,8 +32,8 @@
     },
     {
       "id": "7c7e",
-      "text": "8921098467",
-      "day": "caalling",
+      "text": "Get breakfast",
+      "day": "tommorrow",
       "reminder": true
     }
   ]

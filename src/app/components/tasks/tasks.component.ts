@@ -39,10 +39,12 @@ export class TasksComponent implements OnInit{
     this.taskService.addTask(task).subscribe((task)=>this.tasks.push(task))
   }
 
-  // showEditTask(task:Task){
-  //   this.uiService.toggleEditTask(task);
-    
-  //   // this.taskService.setEditTask(task);
-  // }
-  
+  editTask(task:Task){
+    this.taskService.saveEditTask(task).subscribe(()=>{
+      this.taskService.getTasks().subscribe(tasks=>{
+          this.tasks = tasks;
+      })
+    })
+    console.log('successs')
+  }
 }

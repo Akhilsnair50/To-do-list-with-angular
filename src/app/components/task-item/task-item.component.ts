@@ -15,6 +15,7 @@ export class TaskItemComponent implements OnInit{
   @Output() onDeleteTask:EventEmitter<Task> = new EventEmitter();
   @Output() onToggleReminder:EventEmitter<Task> = new EventEmitter();
   @Output() onEditTask:EventEmitter<Task> = new EventEmitter();
+  @Output() onEditSuccess:EventEmitter<Task> = new EventEmitter();
 
   faTimes = faTimes;
   faEdit = faEdit;
@@ -45,8 +46,7 @@ export class TaskItemComponent implements OnInit{
   
   }
   updateTask(task:Task){
-    this.taskService.saveEditTask(task).subscribe()
-    
+    this.onEditSuccess.emit(task);
   }
    
   closeEdit(){
