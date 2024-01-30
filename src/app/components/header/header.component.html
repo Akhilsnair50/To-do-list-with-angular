@@ -1,0 +1,11 @@
+<header class="pt-5 ">
+  <div class="header">
+    <h1 class="">{{title}}</h1>
+    <app-button class=""
+    color="{{showAddTask ? '#ff3333':'green'}}"
+    text="{{showAddTask ? 'Close':'Add'}}"
+    
+    (btnClick)="toggleAddTask()"
+    ></app-button>
+  </div>
+</header>

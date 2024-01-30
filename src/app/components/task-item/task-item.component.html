@@ -1,0 +1,27 @@
+<div [ngClass]="{reminder :task.reminder}" 
+     class="task"
+     (dblclick)="onToggle(task)">
+
+     <div class="">
+          <h3 >{{task.text}} 
+            </h3>
+          <p>{{task.day}}</p>
+     </div>
+
+     <div class="dltBtn ">
+      <fa-icon 
+        [icon]="faEdit" 
+        [ngStyle]="{'color':'green'}"
+        (click) = "onEdit(task)"
+        ></fa-icon>
+&nbsp;
+      <fa-icon 
+        [icon]="faTimes" 
+        [ngStyle]="{'color':'red'}"
+        (click) = "onDelete(task)"
+        ></fa-icon>
+      
+      </div>
+</div>
+
+<app-edit-task *ngIf="isEditing&&task==editingTask" (onUpdateTask)="updateTask($event)" (closeEdit)="closeEdit()"></app-edit-task>

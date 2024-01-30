@@ -1,0 +1,30 @@
+
+.dltBtn:hover{
+ cursor: pointer;
+}
+.dltBtn{
+  font-size: xx-large;
+}
+.task{
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  
+}
+.task:hover{
+  cursor: grab;
+  background-color:#ff8585;
+  color:white
+}
+.reminder{
+  color: green;
+  border-left: 5px solid ;
+}
+.reminder:hover{
+  background-color: #cfffe0;
+  color: green;
+}
